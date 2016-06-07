@@ -25,7 +25,7 @@ class Stack
   
   def pop
     if @top == nil
-      return "sorry the stack is already empty"
+      return "nil"
     else
       value = @top.value
       @top = @top.next_node
@@ -65,43 +65,21 @@ def print_reverse(stack)
 end
 
 
-#Create a new stack
+#test
 stack = Stack.new
-
-#Push the number 1 to the empty stack
 nodeA = stack.push(1)
-
-#Push the number 2 to the top of the stack
 nodeB = stack.push(2)
-
-#check what is in the stack
 print_forward(nodeB)
-
-#removes the top number from the stack
 puts stack.pop
-
-#removes the remaining number from the stack
 puts stack.pop
-
-#tries to remove the top number from the stack but it is empty
 puts stack.pop
-
-#create a new stack
 stackB = Stack.new
-
-#push 
 node1 = stackB.push(10)
 node2 = stackB.push(20)
 node3 = stackB.push(30)
 node4 = stackB.push(40)
-
-#print it forwards
 print_forward(node4)
-
-#print it reversed
 print_reverse(stackB)
-
-
 
 
 
